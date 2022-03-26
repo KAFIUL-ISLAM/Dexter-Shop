@@ -18,7 +18,8 @@ const Cart = (props) => {
                         </div>
                         )
                     }
-                        <button className="btn btn-outline-primary">Go somewhere</button>
+                    <button className="btn btn-outline-success me-2">Pick Best One</button>
+                    <button className="btn btn-outline-primary">Clear Cart</button>
                     </div>
             </div>
         </div>
