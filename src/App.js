@@ -8,10 +8,15 @@ function App() {
   const [ cart, setCart ] = useState([]);
 
   const handleAddToCart = (product) => {
-    
-    if (cart.length < 4) {
+    const idExist = cart.find(cartProduct => product.id === cartProduct.id)
+    if (cart.length < 4 ) {
+      if (!idExist) {
         const newCart = [...cart, product];
         setCart(newCart);
+      }
+      else {
+        console.log('already exist');
+      }
       }
     else {
       console.log("max limit exceed");
@@ -24,7 +29,7 @@ function App() {
       <div className='container row mx-auto'>
         <Shop handleAddToCart={handleAddToCart}></Shop>
         <Cart cart={cart}></Cart>
-      </div>
+        </div>
     </div>
   );
 }
