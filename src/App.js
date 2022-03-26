@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Cart from './Components/Cart/Cart';
 import Header from './Components/Header/Header';
+import QNA from './Components/QNA/QNA';
 import Shop from './Components/Shop/Shop';
 
 function App() {
@@ -30,7 +31,7 @@ function App() {
       setCart(randomlyPicked);
     }
   }
-  console.log(cart);
+  
   const removeFromCart = product => {
     const updatedCart = cart.filter(item => item !== product);
     setCart(updatedCart);
@@ -43,6 +44,7 @@ function App() {
       <div className='container row mx-auto'>
         <Shop handleAddToCart={handleAddToCart}></Shop>
         <Cart cart={cart} handleClearCart={handleClearCart} randomlyPick={randomlyPick} removeFromCart={removeFromCart}></Cart>
+        <QNA></QNA>
         </div>
     </div>
   );
