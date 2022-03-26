@@ -7,8 +7,8 @@ const Header = () => {
                 <div className="container">
                     <nav className="navbar navbar-light bg-light">
                         <div className="container-fluid">
-                            <a className="navbar-brand" href="#">
-                                <img src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" className="d-inline-block align-text-top"></img>
+                            <a className="navbar-brand text-center fw-bold fs-3" >
+                                <img src="https://logos.textgiraffe.com/logos/logo-name/Dexter-designstyle-cartoon-m.png" alt="" width="100" height="70" className="d-inline-block me-2 mb-2"></img>
                                 Dexter Shop
                             </a>
                         </div>
@@ -19,7 +19,7 @@ const Header = () => {
                     <div className="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                                <a className="nav-link active" aria-current="page">Home</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link active" href="#">Features</a>

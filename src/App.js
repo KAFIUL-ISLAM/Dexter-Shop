@@ -14,12 +14,6 @@ function App() {
         const newCart = [...cart, product];
         setCart(newCart);
       }
-      else {
-        console.log('already exist');
-      }
-      }
-    else {
-      console.log("max limit exceed");
     }
   }
 
@@ -28,14 +22,18 @@ function App() {
     setCart(blankCart);
   }
   
-  let randomMsg = false;
+
   const randomlyPick = () => {
     if (cart.length > 0) {
       const randomProduct = cart[Math.floor(Math.random() * cart.length)];
       const randomlyPicked = [randomProduct];
       setCart(randomlyPicked);
-      randomMsg = true;
     }
+  }
+  console.log(cart);
+  const removeFromCart = product => {
+    const updatedCart = cart.filter(item => item !== product);
+    setCart(updatedCart);
   }
 
 
@@ -44,7 +42,7 @@ function App() {
       <Header></Header>
       <div className='container row mx-auto'>
         <Shop handleAddToCart={handleAddToCart}></Shop>
-        <Cart cart={cart} handleClearCart={handleClearCart} randomlyPick={randomlyPick} randomMsg={randomMsg}></Cart>
+        <Cart cart={cart} handleClearCart={handleClearCart} randomlyPick={randomlyPick} removeFromCart={removeFromCart}></Cart>
         </div>
     </div>
   );

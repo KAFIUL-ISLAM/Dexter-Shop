@@ -3,8 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
 const Cart = (props) => {
-    console.log(props);
-    const {cart, handleClearCart,randomlyPick} = props;
+    const { cart, handleClearCart, randomlyPick,removeFromCart } = props;
         
     return (
         <div className='col-4 mt-5'>
@@ -15,7 +14,7 @@ const Cart = (props) => {
                         cart.map(cartProduct => <div key={cartProduct.id}>
                             <img src={cartProduct.thumbnail} alt="" className='w-25 border rounded-pill m-2'/>
                             <h6 className="card-title d-inline">{cartProduct.name}</h6>
-                            <button className='btn mx-2'><FontAwesomeIcon icon={faTrashCan}></FontAwesomeIcon></button>
+                            <button className='btn mx-2' onClick={() => removeFromCart(cartProduct)}><FontAwesomeIcon icon={faTrashCan}></FontAwesomeIcon></button>
                         </div>
                         )
                     }
