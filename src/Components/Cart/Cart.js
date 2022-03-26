@@ -4,7 +4,7 @@ import React from 'react';
 
 const Cart = (props) => {
     console.log(props);
-    const {cart, handleClearCart} = props;
+    const {cart, handleClearCart,randomlyPick} = props;
         
     return (
         <div className='col-4 mt-5'>
@@ -19,7 +19,7 @@ const Cart = (props) => {
                         </div>
                         )
                     }
-                    <button className="btn btn-outline-success me-2">Pick The Best One</button>
+                    <button className="btn btn-outline-success me-2" onClick={randomlyPick}>Pick The Best One</button>
                     <button className="btn btn-outline-primary" onClick={handleClearCart}>Clear Cart</button>
                     </div>
             </div>

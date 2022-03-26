@@ -27,13 +27,24 @@ function App() {
     const blankCart = [];
     setCart(blankCart);
   }
+  
+  let randomMsg = false;
+  const randomlyPick = () => {
+    if (cart.length > 0) {
+      const randomProduct = cart[Math.floor(Math.random() * cart.length)];
+      const randomlyPicked = [randomProduct];
+      setCart(randomlyPicked);
+      randomMsg = true;
+    }
+  }
+
 
   return (
     <div>
       <Header></Header>
       <div className='container row mx-auto'>
         <Shop handleAddToCart={handleAddToCart}></Shop>
-        <Cart cart={cart} handleClearCart={handleClearCart}></Cart>
+        <Cart cart={cart} handleClearCart={handleClearCart} randomlyPick={randomlyPick} randomMsg={randomMsg}></Cart>
         </div>
     </div>
   );
