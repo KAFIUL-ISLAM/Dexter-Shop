@@ -3,8 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
 const Cart = (props) => {
-    const  cart  = props.cart;
-    
+    console.log(props);
+    const {cart, handleClearCart} = props;
+        
     return (
         <div className='col-4 mt-5'>
             <div className="card bg-light">
@@ -18,8 +19,8 @@ const Cart = (props) => {
                         </div>
                         )
                     }
-                    <button className="btn btn-outline-success me-2">Pick Best One</button>
-                    <button className="btn btn-outline-primary">Clear Cart</button>
+                    <button className="btn btn-outline-success me-2">Pick The Best One</button>
+                    <button className="btn btn-outline-primary" onClick={handleClearCart}>Clear Cart</button>
                     </div>
             </div>
         </div>

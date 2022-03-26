@@ -23,12 +23,17 @@ function App() {
     }
   }
 
+  const handleClearCart = () => {
+    const blankCart = [];
+    setCart(blankCart);
+  }
+
   return (
     <div>
       <Header></Header>
       <div className='container row mx-auto'>
         <Shop handleAddToCart={handleAddToCart}></Shop>
-        <Cart cart={cart}></Cart>
+        <Cart cart={cart} handleClearCart={handleClearCart}></Cart>
         </div>
     </div>
   );
