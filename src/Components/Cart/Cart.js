@@ -13,7 +13,7 @@ const Cart = (props) => {
                     {
                         cart.map(cartProduct => <div key={cartProduct.id}>
                             <img src={cartProduct.thumbnail} alt="" className='w-25 border rounded-pill m-2'/>
-                            <h6 className="card-title d-inline">{cartProduct.name}</h6>
+                            <small className="card-title">{cartProduct.name}</small>
                             <button className='btn mx-2' onClick={() => removeFromCart(cartProduct)}><FontAwesomeIcon icon={faTrashCan}></FontAwesomeIcon></button>
                         </div>
                         )
