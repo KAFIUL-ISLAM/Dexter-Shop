@@ -1,4 +1,7 @@
 ###  `Welcome to My project`
+
+### Dexter Shop
+
 The project is based on Simple React operation
 
 
